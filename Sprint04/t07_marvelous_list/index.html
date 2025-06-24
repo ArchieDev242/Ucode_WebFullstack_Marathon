@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Marvelous List</title>
+
+    <link href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel = "stylesheet"/>
+    <link href = "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel = "stylesheet"/>
+
+    <link rel = "stylesheet" href = "css/style.css"/>
+</head>
+<body>
+    <div class = "container">
+
+        <h1>Marvelous List</h1>
+        
+        <div class = "card">
+            <div class = "flex_container">
+                <div class = "sidebar">
+                    
+                    <ul id = "film_list">
+                        <li><a class = "film_title" href = "#" data_film = "back_to_the_future">Back to the Future</a></li>
+                        <li><a class = "film_title active" href = "#" data_film = "deadpool">Deadpool</a></li>
+                        <li><a class = "film_title" href = "#" data_film = "free_guy">Free Guy</a></li>
+                        <li><a class = "film_title" href = "#" data_film = "kingsman">Kingsman</a></li>
+                    </ul>
+
+                </div>
+
+
+                <div class = "content" id = "film_details">
+                    <div class = "details">
+                        <h2 id = "film_title">Deadpool</h2>
+
+                        <p class = "date" id = "film_date">February 12, 2016</p>
+
+                        <div class = "actors" id = "film_actors">  
+                            <button>Ryan Reynolds</button>
+                            <button>Morena Baccarin</button>
+                            <button>Ed Skrein</button>
+                        </div>
+
+                        <p id = "film_info">
+                            A wisecracking mercenary with accelerated healing powers embarks on a quest for revenge after a botched experiment leaves him disfigured.
+                        </p>
+
+                    </div>
+
+                    <div class = "poster">
+                        <img id = "film_poster" alt = "Deadpool movie poster" height = "300" src="assets/images/deadpool.jpg" width = "200"/>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src = "js/script.js"></script>
+</body>
+</html> 

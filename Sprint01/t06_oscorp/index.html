@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oscorp</title>
+    <link rel = "stylesheet" href = "style.css" />
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+    <header class = "header">
+        <div class = "container header_container">
+            <div class = "logo">
+                <img src = "assets/images/Oscorp.jpg" alt = "Oscorp Logo" width = "100" />
+            </div>
+            <nav>
+                <a href = "#">About</a>
+                <a href = "#">Service</a>
+                <a href = "#">Contact</a>
+                <div class = "search_container">
+                    <input type = "text" placeholder = "Search..." />
+                </div>
+            </nav>
+            <div class = "phone">Phone: +5551234567</div>
+        </div>
+    </header>
+
+    <div class = "breadcrumb_container">
+        <div class = "container">
+            <nav class = "breadcrumb">
+                <a href = "#" class = "breadcrumb_home">Home</a>
+                <span class = "breadcrumb_separator">/</span>
+                <a href = "#" class = "breadcrumb_catalog">Catalog</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class = "container main_content">
+        <div class = "catalog_wrapper">
+            <aside class = "sidebar">
+                <h2>Catalog</h2>
+                <div class = "pill_buttons">
+                    <div class = "pill_button">Weapon <i class = "fas fa-check"></i></div>
+                    <div class = "pill_button">Alien <i class = "fas fa-check"></i></div>
+                    <div class = "pill_button">Green <i class = "fas fa-check"></i></div>
+                </div>
+                <div class = "filter_section">
+                    <h3>Chance of Lethal Effect</h3>
+                    <ul>
+                        <li><input type = "checkbox" id = "chance_unlikely" /><label for = "chance_unlikely">Unlikely (0-20%)</label></li>
+                        <li><input type = "checkbox" id = "chance_mid" /><label for = "chance_mid">Mid (20-40%)</label></li>
+                        <li><input type = "checkbox" id = "chance_moderate" /><label for = "chance_moderate">Moderate (40-60%)</label></li>
+                        <li><input type = "checkbox" id = "chance_likely" /><label for = "chance_likely">Likely (60-80%)</label></li>
+                        <li><input type = "checkbox" id = "chance_certain" /><label for = "chance_certain">Certain (80-100%)</label></li>
+                    </ul>
+                </div>
+                <div class = "filter_section">
+                    <h3>Price</h3>
+                    <input type = "range" min = "0" max = "20000" />
+                    <div class = "range_labels">
+                        <span>0</span>
+                        <span>20000</span>
+                    </div>
+                </div>
+            </aside>
+
+            <main class = "product_list">
+                <a href = "card.html" class = "product_card">
+                    <img src = "assets/images/Spider.jpg" alt = "Radioactive Spider" />
+                    <div class = "product_info">
+                        <h3>RADIOACTIVE SPIDER</h3>
+                        <p class = "price">3499.99$</p>
+                        <p class = "status not_available">Not available</p>
+                        <button class = "not_available" disabled>BUY</button>
+                    </div>
+                </a>
+                <a href = "card.html" class = "product_card">
+                    <img src = "assets/images/Goblin_bomb.jpg" alt = "Goblin Pumpkin Bomb" />
+                    <div class = "product_info">
+                        <h3>GOBLIN PUMPKIN BOMB</h3>
+                        <p class = "price">214.50$</p>
+                        <p class = "status available">Available</p>
+                        <button>BUY</button>
+                    </div>
+                </a>
+                <a href = "card.html" class = "product_card">
+                    <img src = "assets/images/Spider.jpg" alt = "Radioactive Spider" />
+                    <div class = "product_info">
+                        <h3>RADIOACTIVE SPIDER</h3>
+                        <p class = "price">1200.00$</p>
+                        <p class = "status available">Available</p>
+                        <button>BUY</button>
+                    </div>
+                </a>
+                <a href = "card.html" class = "product_card">
+                    <img src = "assets/images/Goblin_glider.jpg" alt = "Goblin Glider" />
+                    <div class = "product_info">
+                        <h3>GOBLIN GLIDER</h3>
+                        <p class = "price">9200.00$</p>
+                        <p class = "status available">Available</p>
+                        <button>BUY</button>
+                    </div>
+                </a>
+            </main>
+        </div>
+    </div>
+
+    <footer class = "footer">
+        <div class = "container footer_container">
+            <div>Copyright © 2025 | OSCORP | All Rights Reserved</div>
+            <div>
+                <a href = "#">Terms of Service</a>
+                <a href = "#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

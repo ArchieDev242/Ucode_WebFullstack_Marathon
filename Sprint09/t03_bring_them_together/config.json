@@ -1,0 +1,16 @@
+{
+    "database": 
+    {
+        "host": "localhost",
+        "user": "mkopychko",
+        "password": "securepass",
+        "database": "sword"
+    },
+    "email": 
+    {
+        "user": "yourmail@gmail.com",
+        "pass": "appPassword",
+        "display_name": "SWORD Security",
+        "display_address": "noreply@swordsecurity.org"
+    }
+}

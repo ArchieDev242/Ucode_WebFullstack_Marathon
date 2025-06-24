@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Make square image</title>
+
+        <link rel = "stylesheet" href = "style.css" />
+    </head>
+    <body>
+        <h1>Make square image</h1>
+
+        <div id = "form_image">
+
+            <input type = "text" id = "input_url" placeholder = "Enter image URL" />
+            <div>
+                <button id = "btn_load">Go</button>
+            </div>
+            
+        </div>
+
+        <div id = "container_gallery">
+            <canvas id = "canvas_original"></canvas>
+            <canvas id = "canvas_red"></canvas>
+            <canvas id = "canvas_green"></canvas>
+            <canvas id = "canvas_blue"></canvas>
+        </div>
+
+        <script src = "script.js"></script>
+    </body>
+</html>

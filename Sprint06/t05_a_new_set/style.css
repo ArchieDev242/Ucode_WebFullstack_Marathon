@@ -1,0 +1,18 @@
+#wrap { width: fit-content; }
+
+#result 
+{
+    display: none;    
+    padding: 20px;
+    margin-bottom: 10px;
+    border: 2px solid gray;
+    background-color: darkgray;
+}
+
+#form_candidate 
+{
+    border: 2px solid gray;
+    padding: 20px;
+}
+
+#description { resize: none; }

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Reminder</title>
+    <link rel = "stylesheet" href = "/style.css">
+    <link rel = "preconnect" href = "https://fonts.googleapis.com">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
+    <link href = "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class = "glitch_container">
+        <div class = "glitch" data-text = "SWORD">SWORD</div>
+    </div>
+    
+    <div class = "container">
+        <h1>PASSWORD RECOVERY</h1>
+        <div class = "neon_line"></div>
+        <form id = "reminder_form">
+            <div class = "form_group">
+                <input type = "email" name = "email" placeholder = "REGISTERED EMAIL" required>
+                <div class = "input_border"></div>
+            </div>
+            
+            <button type = "submit">SEND REMINDER_<span class = "blink">|</span></button>
+        </form>
+        <div id = "msg"></div>
+    </div>
+
+    <script>
+        document.getElementById('reminder_form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = e.target.email.value;
+
+            try 
+            {
+                const response = await fetch('/password-reminder', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email })
+                });
+                
+                const result = await response.json();
+                showmsg(result.message, response.ok);
+                
+            } catch(error) 
+            {
+                showmsg('Connection error :<', false);
+            }
+        });
+
+        function showmsg(text, is_success) 
+        {
+            const msg_div = document.getElementById('msg');
+            msg_div.textContent = text;
+            msg_div.className = `msg ${is_success ? 'success' : 'error'}`;
+            setTimeout(() => {
+                msg_div.textContent = '';
+                msg_div.className = 'msg';
+            }, 5000);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+body 
+{
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+#form_image 
+{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input 
+{
+    width: 300px;
+    padding: 8px;
+}
+
+button 
+{
+    padding: 8px 16px;
+    margin-top: 10px;
+    width: 50px;
+}
+
+#container_gallery 
+{
+    width: auto;
+    padding: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-self: center;
+    justify-items: center;
+    align-items: center;
+}
+
+canvas 
+{
+    background: white;
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+}

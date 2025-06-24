@@ -1,0 +1,40 @@
+body 
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+}
+
+.container 
+{
+    position: relative;
+    width: 600px;
+    height: 400px;
+}
+
+.stone 
+{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    cursor: pointer;
+    transform: rotate(45deg);
+    transition: border 0.3s;
+}
+
+.stone:not(.draggable) 
+{
+    border: 3px dashed #333;
+    cursor: default;
+}
+
+#reality_stone { background-color: #d83955; }
+#space_stone { background-color: #0685d6; }
+#power_stone { background-color: #a54dd7; }
+#time_stone { background-color: #44d765; }
+#mind_stone { background-color: #d9c451; }
+#soul_stone { background-color: #d8567c; }

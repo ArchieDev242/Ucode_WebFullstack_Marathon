@@ -1,0 +1,43 @@
+#glove 
+{
+    width: 100px;
+    display: block;
+    margin: 0 auto 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.people 
+{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    width: max-content;
+    margin: 0 auto;
+}
+
+.human 
+{
+    width: 50px;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#glove:hover ~ .people .human:nth-child(12n + 1),
+#glove:hover ~ .people .human:nth-child(12n + 3),
+#glove:hover ~ .people .human:nth-child(12n + 5),
+#glove:hover ~ .people .human:nth-child(12n + 8),
+#glove:hover ~ .people .human:nth-child(12n + 10),
+#glove:hover ~ .people .human:nth-child(12n + 12),
+#glove:hover ~ .people .human:nth-child(12n + 13),
+#glove:hover ~ .people .human:nth-child(12n + 15),
+#glove:hover ~ .people .human:nth-child(12n + 17),
+#glove:hover ~ .people .human:nth-child(12n + 20),
+#glove:hover ~ .people .human:nth-child(12n + 22),
+#glove:hover ~ .people .human:nth-child(12n + 24),
+#glove:hover ~ .people .human:nth-child(12n + 25),
+#glove:hover ~ .people .human:nth-child(12n + 27),
+#glove:hover ~ .people .human:nth-child(12n + 29) 
+{
+    opacity: 0;
+    visibility: hidden;
+}

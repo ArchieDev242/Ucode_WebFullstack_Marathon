@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Show Other Sites</title>
+</head>
+
+<body>
+	<h1>Show other sites</h1>
+
+	<form id = "form_url" action = "/fetch-url" method = "POST">
+		<label for = "input_url">Enter URL:</label>
+		<input type = "url" id = "input_url" name = "url" required>
+		<button id = "btn_submit" type = "submit">Go</button>
+		<a id = "link_back" href = "/">BACK</a>
+	</form>
+	
+	<div id = "div_content"></div>
+	<script src = "script.js"></script>
+</body>
+
+</html>

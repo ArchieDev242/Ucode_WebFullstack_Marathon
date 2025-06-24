@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - ERROR</title>
+    <link rel = "stylesheet" href = "/style.css">
+    <link rel = "preconnect" href = "https://fonts.googleapis.com">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
+    <link href = "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class = "glitch_container">
+        <div class = "glitch" data-text = "ERROR">ERROR</div>
+    </div>
+    
+    <div class = "container">
+        <div class = "error_container scanning">
+            
+            <div class = "error_code">404</div>
+            <h1>INTRUSION DETECTED</h1>
+            <div class = "neon_line"></div>
+            <p class = "error_msg">SECURITY BREACH - LOCATION DOES NOT EXIST</p>
+
+            <div class = "terminal_txt">
+                <p>> TRACKING IP ADDRESS...</p>
+                <p>> UNAUTHORIZED ACCESS ATTEMPT LOGGED</p>
+                <p>> SECURITY COUNTERMEASURES INITIATED</p>
+                <p>> FACIAL RECOGNITION SCAN IN PROGRESS</p>
+                <p>> BIOMETRIC DATA COLLECTED</p>
+                <p class = "blink">> AUTHORITIES HAVE BEEN NOTIFIED_</p>
+            </div>
+
+            <div class = "btn_container">
+                <button class = "back_btn danger_btn" onclick = "window.location.href='/'">
+                    EVACUATE IMMEDIATELY_<span class = "blink">|</span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        async function check_auth() 
+        {
+            try 
+            {
+                const response = await fetch('/check-auth');
+                const data = await response.json();
+                
+                if(!data.authenticated) 
+                {
+                    document.querySelector('.back-button').onclick = function() {
+                        window.location.href = '/login';
+                    }
+                }
+            } catch(error) 
+            {
+                console.error('Auth check failed :<  :', error);
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() 
+        {
+            check_auth();
+            
+            setInterval(() => {
+                const container = document.querySelector('.glitch_container');
+                container.classList.add('glitch_animate');
+                setTimeout(() => container.classList.remove('glitch_animate'), 200);
+                
+                document.body.style.transform = `translate(${Math.random()*4-2}px, ${Math.random()*4-2}px)`;
+                setTimeout(() => {
+                    document.body.style.transform = 'translate(0, 0)';
+                }, 100);
+            }, 2000);
+            
+            setInterval(() => {
+                document.body.classList.add('flicker');
+                setTimeout(() => {
+                    document.body.classList.remove('flicker');
+                }, 50);
+            }, 5000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session for New</title>
+    <style>
+        body 
+        {
+            font-family: Arial, sans-serif; 
+            margin: 20px;
+        }
+
+        h1 
+        {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+         .container_form 
+        {
+            border: 3px solid grey;
+            padding: 15px;
+            margin: 20px;
+        }
+        
+        /* No border for the container with results */
+        .container_result 
+        {
+            padding: 15px;
+            margin: 20px;
+        }
+        
+        .section_form, .section_data { margin: 10px 0; }
+        
+        fieldset 
+        {
+            border: 2px solid grey;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        
+        legend 
+        {
+            font-weight: bold;
+            padding: 0 5px;
+        }
+        
+        .row_input 
+        {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .row_input input[type="text"] { flex: 1; }
+        
+        .row_input input[type="number"] { width: 50px; }
+        
+        textarea 
+        {
+            width: 100%;
+            height: 80px;
+        }
+        
+        input[type="file"] { width: 100%; }
+        
+        .row_checkbox, .row_radio 
+        {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .box_publicity { text-transform: uppercase; }
+        
+        .row_level 
+        {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .row_level input[type="range"] { width: 150px; }
+        
+        button 
+        {
+            background-color: white;
+            border: 1px solid grey;
+            border-radius: 0;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin: 5px;
+            padding: 5px 10px;
+        }
+        
+        .section_data { display: none; }
+        
+        .section_data p 
+        {
+            margin: 5px 0;
+            font-weight: normal;
+        }
+        
+        /* Purpose line with no bottom margin */
+        #div_result p:last-of-type {
+            margin-bottom: 0;
+        }
+        
+        #btn_forget 
+        {
+            background-color: white;
+            border: 1px solid grey;
+            border-radius: 0;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin: 5px;
+            padding: 5px 10px;
+        }
+        
+        .box_forget 
+        {
+            border: 2px solid grey;
+            width: 90%;
+            text-align: left;
+            margin: 0 auto;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Session for New</h1>
+
+    <!-- Form container -->
+    <div id="container_form" class="container_form">
+        <div id="div_form" class="section_form">
+            <form id="form_hero" method="POST" action="/submit" enctype="multipart/form-data">
+                
+                <fieldset class="box_about">
+                    <legend>About Hero</legend>
+                    <div class="row_input">
+                        <div>
+                            <label>Real Name: </label><br>
+                            <input type="text" id="input_realName" name="realName">
+                        </div>
+                        <div>
+                            <label>Current Alias: </label><br>
+                            <input type="text" id="input_currentAlias" name="currentAlias">
+                        </div>
+                        <div>
+                            <label>Age: </label><br>
+                            <input type="number" id="input_age" name="age">
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <label>About: </label><br>
+                    <textarea id="input_about" name="about"></textarea>
+                    
+                    <br><br>
+
+                    <label>Photo: </label><br>
+                    <input type="file" id="input_photo" name="photo"><br>
+                </fieldset>
+
+                <fieldset class="box_powers">
+                    <legend>Powers</legend>
+                    <div class="row_checkbox">
+                        <div>
+                            <input type="checkbox" name="powers" value="Strength"> Strength
+                        </div>
+                        <div>
+                            <input type="checkbox" name="powers" value="Speed"> Speed
+                        </div>
+                        <div>
+                            <input type="checkbox" name="powers" value="Intelligence"> Intelligence
+                        </div>
+                        <div>
+                            <input type="checkbox" name="powers" value="Teleportation"> Teleportation
+                        </div>
+                        <div>
+                            <input type="checkbox" name="powers" value="Immortal"> Immortal
+                        </div>
+                        <div>
+                            <input type="checkbox" name="powers" value="Another"> Another
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="box_level">
+                    <legend>Level of Control</legend>
+                    <div class="row_level">
+                        <label>Level of Control: </label>
+                        <input type="range" id="input_levelOfControl" name="levelOfControl" min="1" max="10">
+                    </div>
+                </fieldset>
+
+                <fieldset class="box_publicity">
+                    <legend>PUBLICITY</legend>
+                    <div class="row_radio">
+                        <div>
+                            <input type="radio" name="publicity" value="UNKNOWN"> UNKNOWN
+                        </div>
+                        <div>
+                            <input type="radio" name="publicity" value="LIKE A GHOST"> LIKE A GHOST
+                        </div>
+                        <div>
+                            <input type="radio" name="publicity" value="I AM IN COMICS"> I AM IN COMICS
+                        </div>
+                        <div>
+                            <input type="radio" name="publicity" value="I HAVE FUN CLUB"> I HAVE FUN CLUB
+                        </div>
+                        <div>
+                            <input type="radio" name="publicity" value="SUPERSTAR"> SUPERSTAR
+                        </div>
+                    </div>
+                </fieldset>
+
+                <button type="button" id="btn_clear">Clear</button>
+                <button type="submit" id="btn_send">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Results container with no border -->
+    <div id="container_result" class="container_result">
+        <div id="div_result" class="section_data">
+            <p>name : <span id="span_savedRealName"></span></p>
+            <p>alias : <span id="span_savedCurrentAlias"></span></p>
+            <p>age : <span id="span_savedAge"></span></p>
+            <p>description : <span id="span_savedAbout"></span></p>
+            <p>photo : <span id="span_savedPhoto"></span></p>
+            <p>experience : <span id="span_savedPowers"></span></p>
+            <p>level : <span id="span_savedLevelOfControl"></span></p>
+            <p>purpose : <span id="span_savedPublicity"></span></p>
+            <div class="box_forget">
+                <button id="btn_forget">Forget</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

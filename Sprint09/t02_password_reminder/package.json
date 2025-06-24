@@ -1,0 +1,18 @@
+{
+  "name": "t02_password_reminder",
+  "version": "1.0.0",
+  "description": "simple password reminder system",
+  "main": "index.js",
+  "dependencies": 
+  {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "express-session": "^1.18.1",
+    "mysql2": "^3.14.1",
+    "nodemailer": "^7.0.3"
+  },
+  "scripts": 
+  {
+    "test": "node index.js"
+  }
+}

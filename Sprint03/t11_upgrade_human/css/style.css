@@ -1,0 +1,32 @@
+body 
+{
+    text-align: center;
+}
+
+#box 
+{
+    width: 500px;
+    margin: 20px auto;
+}
+
+#stats
+{
+    margin-bottom: 30px;
+}
+
+#pic 
+{
+    width: 200px;
+}
+
+#msg 
+{
+    color: red;
+    font-size: 18px;
+}
+
+button 
+{
+    padding: 5px;
+    margin: 5px;
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Files</title>
+
+    <style>
+        body 
+        {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container_main 
+        {
+            width: auto;
+            max-width: 95%;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .box_field 
+        {
+            border: 2px solid grey;
+            padding: 15px;
+            width: auto;
+            margin-bottom: 10px;
+        }
+
+        .row_form 
+        {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            margin-left: 20px;
+        }
+
+        form.box_field label 
+        {
+            display: inline-block;
+            width: auto;
+            margin-right: 3px;
+            white-space: nowrap;
+        }
+
+        form.box_field input 
+        {
+            display: inline-block;
+            width: 50%;
+        }
+
+        form.box_field textarea 
+        {
+            display: inline-block;
+            width: 50%;
+            min-height: 100px;
+            vertical-align: top;
+        }
+
+        form.box_field button 
+        {
+            display: block;
+            margin: 15px 0;
+            padding: 5px 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            cursor: pointer;
+        }
+
+        .message_error:empty { display: none; }
+        #list_files:empty { display: none; }
+        
+        .selected_file 
+        {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+        }
+        
+        .selected_file.hidden 
+        {
+            display: none;
+        }
+        
+        .file_content 
+        {
+            margin-top: 10px;
+            padding: 8px;
+            background-color: white;
+            border: 1px solid #eee;
+            min-height: 100px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class = "container_main">
+        <h1>Files</h1>
+        
+        <form id = "form_create" class = "box_field" action = "/create" method = "post">
+            <h2>Create file</h2>
+            
+            <div class = "row_form">
+                <label for = "input_filename">File name:</label>
+                <input type = "text" id = "input_filename" name = "fileName" required>
+            </div>
+            
+            <div class = "row_form">
+                <label for = "input_content">Content:</label>
+                <textarea id = "input_content" name = "content"></textarea>
+            </div>
+            
+            <div class = "message_error" id = "text_error">
+                <% if (typeof errorMsg !== 'undefined' && errorMsg) { %>
+                    <%= errorMsg %>
+                <% } %>
+            </div>
+            
+            <button type = "submit" id = "btn_submit">Create file</button>
+        </form>
+        
+        <div class = "box_field">
+            <h2>Created files</h2>
+            <div id = "list_files">
+                <% if (typeof filesHTML !== 'undefined') { %>
+                    <%- filesHTML %>
+                <% } %>
+            </div>
+            
+            <div id = "selected_file_section" class = "selected_file <%= typeof selectedFileName === 'undefined' ? 'hidden' : '' %>">
+                <h3>Selected file:</h3>
+                <p><strong>
+                    <% if (typeof selectedFileName !== 'undefined') { %>
+                        <%= selectedFileName %>
+                    <% } %>
+                </strong></p>
+                <h3>Content:</h3>
+                <div id = "selected_file_content" class = "file_content">
+                    <% if (typeof selectedFileContent !== 'undefined') { %>
+                        <%= selectedFileContent %>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const error_msg = document.getElementById('text_error');
+        if(error_msg && error_msg.textContent.trim() !== '') 
+        {
+            error_msg.style.color = 'red';
+            error_msg.style.marginBottom = '10px';
+        }
+    </script>
+</body>
+</html>

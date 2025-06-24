@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel = "stylesheet" href = "/style.css">
+    <link rel = "preconnect" href = "https://fonts.googleapis.com">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
+    <link href = "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class = "glitch_container">
+        <div class = "glitch" data-text = "SWORD">SWORD</div>
+    </div>
+    
+    <div class = "container" id = "login_container">
+
+        <h1>AGENT AUTHENTICATION</h1>
+        <div class = "neon_line"></div>
+
+        <form id = "login_form">
+
+            <div class = "form_group">
+                <input type = "text" name = "login" placeholder = "LOGIN" required>
+                <div class = "input_border"></div>
+            </div>
+            
+            <div class = "form_group">
+                <input type = "password" name = "password" placeholder = "PASSWORD" required>
+                <div class = "input_border"></div>
+            </div>
+            
+            <button type = "submit">INITIALIZE_<span class = "blink">|</span></button>
+        </form>
+
+        <div id = "msg"></div>
+
+        <div class = "nav_links">
+            <a href = "/register">NEW AGENT REGISTRATION</a>
+            <a href = "/password-reminder">PASSWORD REMINDER</a>
+        </div>
+
+    </div>
+
+    <div class = "container" id = "dashboard" style = "display: none;">
+        <h1>AGENT STATUS</h1>
+        <div class = "neon_line"></div>
+        
+        <div class = "status_panel">
+            <div class = "status_item">
+                <span class = "status_label">CALLSIGN:</span>
+                <span class = "status_value" id = "user_login"></span>
+            </div>
+
+            <div class = "status_item">
+                <span class = "status_label">FULL NAME:</span>
+                <span class = "status_value" id = "username"></span>
+            </div>
+
+            <div class = "status_item">
+                <span class = "status_label">STATUS:</span>
+                <span class = "status_value" id = "user_status"></span>
+            </div>
+
+        </div>
+
+        <div class = "action_buttons">
+            <button id = "logout_btn" class = "emergency">
+                TERMINATE SESSION_<span class = "blink">|</span>
+            </button>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', check_auth_status);
+
+        document.getElementById('login_form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const form_data = new FormData(e.target);
+            const data = Object.fromEntries(form_data.entries());
+
+            try 
+            {
+                const response = await fetch('/api/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                
+                const result = await response.json();
+                
+                if(response.ok) 
+                {
+                    show_dashboard(result.user);
+                    const user_access_level = result.user.status === 'admin' ? 'Administrator' : 'Standard Agent';
+                    showmsg(`Access granted! Welcome, ${result.user.login} [${user_access_level}]`, true);
+                } else 
+                {
+                    showmsg(result.error || 'Authentication failed! :<', false);
+                    glitch_trigger();
+                }
+            } catch(error) 
+            {
+                showmsg('Connection to HQ lost!', false);
+                glitch_trigger();
+            }
+        });
+
+        document.getElementById('logout_btn').addEventListener('click', async () => {
+            try 
+            {
+                const response = await fetch('/api/logout', { method: 'POST' });
+
+                if(response.ok) 
+                {
+                    window.location.reload();
+                }
+            } catch(error) 
+            {
+                showmsg('Failed to terminate session! :<', false);
+            }
+        });
+
+        async function check_auth_status() 
+        {
+            try 
+            {
+                const response = await fetch('/check-auth', {
+                    method: 'GET',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    credentials: 'same-origin'
+                });
+                
+                if(!response.ok) 
+                {
+                    throw new Error('Server response was not ok :<');
+                }
+                
+                const data = await response.json();
+                
+                if(data.authenticated && data.user) 
+                {
+                    show_dashboard(data.user);
+                } else 
+                {
+                    document.getElementById('login_container').style.display = 'block';
+                    document.getElementById('dashboard').style.display = 'none';
+                }
+            } catch(error) 
+            {
+                console.error('Status check failed:', error);
+                document.getElementById('login_container').style.display = 'block';
+                document.getElementById('dashboard').style.display = 'none';
+                showmsg('Connection to HQ lost!', false);
+            }
+        }
+
+        function show_dashboard(user) 
+        {
+            document.getElementById('login_container').style.display = 'none';
+            document.getElementById('dashboard').style.display = 'block';
+            document.getElementById('user_login').textContent = user.login.toUpperCase();
+            document.getElementById('username').textContent = user.full_name ? user.full_name.toUpperCase() : 'AGENT';
+            
+            const user_status_element = document.getElementById('user_status');
+            user_status_element.textContent = user.status ? user.status.toUpperCase() : 'USER';
+            
+            if(user.status === 'admin') 
+            {
+                user_status_element.classList.add('admin_status');
+                user_status_element.classList.remove('user_status');
+            } else 
+            {
+                user_status_element.classList.add('user_status');
+                user_status_element.classList.remove('admin_status');
+            }
+        }
+
+        function showmsg(text, is_success) 
+        {
+            const msg_div = document.getElementById('msg');
+            msg_div.textContent = text;
+            msg_div.className = `msg ${is_success ? 'success' : 'error'}`;
+            
+            if(!is_success) 
+            {
+                msg_div.classList.add('glitch_text');
+                setTimeout(() => msg_div.classList.remove('glitch_text'), 2000);
+            }
+            
+            setTimeout(() => {
+                msg_div.textContent = '';
+                msg_div.className = 'msg';
+            }, 5000);
+        }
+
+        function glitch_trigger() 
+        {
+            const glitch_container = document.querySelector('.glitch_container');
+            glitch_container.classList.add('glitch_animate');
+            setTimeout(() => glitch_container.classList.remove('glitch_animate'), 500);
+        }
+    </script>
+</body>
+</html>

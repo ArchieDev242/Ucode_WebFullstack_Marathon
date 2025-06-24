@@ -1,0 +1,54 @@
+#table_infinity 
+{
+    text-align: center;
+    border-collapse: collapse;
+}
+
+#header_row 
+{
+    background-color: black;
+    color: white;
+}
+
+.stone_image 
+{
+    width: 120px;
+    height: 120px;
+    border-radius: 20%;
+}
+
+tr td 
+{
+    border: 2px solid lightgrey;
+    padding: 10px;
+}
+
+#soul_row 
+{
+    background-color: orange;
+}
+
+#time_row 
+{
+    background-color: green;
+}
+
+#space_row 
+{
+    background-color: royalblue;
+}
+
+#mind_row 
+{
+    background-color: yellow;
+}
+
+#reality_row 
+{
+    background-color: firebrick;
+}
+
+#power_row 
+{
+    background-color: mediumpurple;
+}

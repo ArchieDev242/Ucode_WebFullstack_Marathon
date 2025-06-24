@@ -1,0 +1,21 @@
+#wrapper 
+{
+    display: flex;
+    height: 2em;
+}
+
+#search_field 
+{
+    flex-grow: 1;
+}
+
+#search_field, #finder
+{
+    color: green;
+    padding: 0 10px 0 10px;
+}
+
+#search_field:hover, #finder:hover 
+{
+    color: red;
+}

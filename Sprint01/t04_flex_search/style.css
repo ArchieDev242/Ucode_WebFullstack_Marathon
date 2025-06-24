@@ -1,0 +1,48 @@
+body 
+{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header 
+{
+    font-size: 28px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+form 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.input_phrase 
+{
+    flex-grow: 3;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    color: green;
+}
+
+.input_phrase::placeholder 
+{
+    color: green;
+}
+
+.find_button 
+{
+    background-color: #ddd;
+    color: gray;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+}

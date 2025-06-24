@@ -1,0 +1,15 @@
+node_modules/
+package-lock.json
+package.json
+
+t05_a_new_set/node_modules/
+t05_a_new_set/package-lock.json
+t05_a_new_set/package.json
+
+t07_go_web/node_modules/
+t07_go_web/package-lock.json
+t07_go_web/package.json
+
+t08_info/node_modules/
+t08_info/package-lock.json
+t08_info/package.json

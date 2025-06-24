@@ -1,0 +1,16 @@
+{
+  "name": "t00_registration",
+  "version": "1.0.0",
+  "description": "simple registration system",
+  "main": "index.js",
+  "dependencies": 
+  {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.1"
+  },
+  "scripts": 
+  {
+    "test": "node index.js"
+  }
+}

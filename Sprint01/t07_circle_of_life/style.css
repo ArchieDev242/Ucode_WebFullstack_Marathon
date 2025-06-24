@@ -1,0 +1,69 @@
+body 
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(circle at center, #0d0d0d, #1a1a1a);
+    overflow: hidden;
+}
+
+.container 
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.title 
+{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 32px;
+    color: #00ffcc;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 40px #00ffcc;
+    margin-bottom: 20px;
+}
+
+.circle 
+{
+    width: 80px;
+    height: 80px;
+    background: #00ffcc;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    animation: moveCircle 3s ease-in-out infinite;
+    box-shadow: 0 0 15px #00ffcc, 0 0 30px #00ffcc, 0 0 60px #00ffcc;
+    will-change: transform, background;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circle:hover 
+{
+    background: #ff00ff;
+    box-shadow: 0 0 15px #ff00ff, 0 0 30px #ff00ff, 0 0 60px #ff00ff;
+}
+
+@keyframes moveCircle 
+{
+    0%, 100% 
+    {
+        left: 5%;
+    }
+
+    50% 
+    {
+        left: 95%;
+        transform: translateY(-50%) scale(1.1);
+    }
+}

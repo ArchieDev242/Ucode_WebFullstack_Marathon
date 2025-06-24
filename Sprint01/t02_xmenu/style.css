@@ -1,0 +1,111 @@
+h1 
+{
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+
+.wrap 
+{
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown_menues 
+{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown_menues > li 
+{
+    flex: 1;
+    margin: 0 3px;
+    min-width: 0;
+}
+
+ul, li 
+{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown 
+{
+    position: relative;
+    float: left;
+    line-height: 50px;
+    background-color: #a5a5a5;
+    text-align: center;
+    width: 100%;
+}
+
+.dropdown a, .dropdown span 
+{
+    color: #000;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.dropdown > ul 
+{
+    width: 100%;
+}
+
+.submenu 
+{
+    display: none;
+    width: 100%;
+}
+
+.dropdown:hover > ul 
+{
+    display: block;
+    position: absolute;
+}
+
+.submenu li 
+{
+    background-color: #a5a5a5;
+    line-height: 50px;
+    width: 100%;
+}
+
+.dropdown ul ul 
+{
+    left: 100%;
+    top: 0;
+}
+
+li:hover 
+{
+    background-color: #c00;
+}
+
+.dropdown:hover > a:not(.heading), .dropdown:hover > span:not(.heading) 
+{
+    color: #fff;
+}
+
+.submenu .dropdown:hover > span 
+{
+    color: #fff !important;
+}
+
+.submenu .dropdown:hover > a 
+{
+    color: #fff !important;
+}
+
+.submenu li:hover a, .submenu li:hover span 
+{
+    color: #000 !important;
+}

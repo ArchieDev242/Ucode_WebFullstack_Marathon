@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>WhoisWho</title>
+	<style>
+		body 
+        {
+			color: rgb(0, 0, 0);
+			max-height: 100vh;
+			height: 100vh;
+		}
+
+		table 
+        {
+			width: 100%;
+			border-collapse: collapse;
+			color: rgb(0, 0, 0);
+		}
+
+		table,
+		th,
+		td 
+        {
+			border: 1px solid rgb(0, 0, 0);
+		}
+
+		th,
+		td 
+        {
+			padding: 8px;
+			text-align: left;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Parsing CSV data</h1>
+
+	<span>Choose a file to upload: </span>
+	<input type = "file" id = "input_file" accept = ".csv">
+	<button id = "btn_upload" onclick = "uploadFile()">Upload</button>
+
+	<br><br>
+
+	<div id = "section_filter" style = "display:none;">
+		<label for = "select_column">Filter:</label>
+		<select id = "select_column"></select>
+		<input type = "text" id = "input_filter">
+		<button id = "btn_filter" onclick = "applyFilter()">Apply</button>
+	</div>
+
+	<table id = "table_csv"></table>
+
+	<script src = "script.js"></script>
+</body>
+
+</html>

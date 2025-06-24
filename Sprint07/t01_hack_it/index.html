@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Encryption</title>
+    <style>
+        .message_error 
+        {
+            color: red;
+        }
+        
+        .message_success 
+        {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class = "container_main">
+        <h1>Password</h1>
+       
+        <div id = "div_result"></div>
+        <p id = "text_dataStatus" style = "margin-bottom:0;">Password not saved at session</p>
+       
+        <div id = "section_savingPass" style = "margin-top:0;">
+            <label for = "input_password">Password for saving to session:</label>
+            <input type = "password" id = "input_password" placeholder = "Password to session">
+            
+            <br>
+            
+            <label for = "input_salt">Salt for saving to session:</label>
+            <input type = "text" id = "input_salt" placeholder = "Salt to session">
+            
+            <br>
+            
+            <button id = "btn_save" onclick = "saveData()">Save</button>
+        </div>
+        
+        <div id = "div_output"></div>
+       
+        <div id = "section_guessField" style = "display:none;">
+            <label for = "input_guess">Guess Password:</label>
+            <input type = "password" id = "input_guess">
+            <button id = "btn_check" onclick = "checkPassword()">Check password</button>
+            
+            <br>
+            
+            <button id = "btn_clear" onclick = "clearSession()">Clear</button>
+        </div>
+    </div>
+
+    <script src = "script.js"></script>
+</body>
+</html>

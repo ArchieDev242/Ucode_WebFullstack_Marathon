@@ -1,0 +1,83 @@
+.wrapper_main
+{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	margin-top: 15px;
+}
+
+.box_item
+{
+	background: gray;
+	border: 1px solid rgb(216, 31, 31);
+	margin: 5px;
+	padding: 10px;
+	width: auto;
+}
+
+.text_name{ color: #1ea7c5; }
+.parent_color{ color: #ffffff; }
+.text_value{ color: #616b25; }
+
+.parent
+{
+	background: #2b2e31;
+	margin: 10px;
+}
+
+.child{ background: #191924; }
+
+.status_loading 
+{
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: #333;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse 
+{
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+.message_error 
+{
+    background-color: #ffeeee;
+    border: 1px solid #ffcccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.message_error h3 
+{
+    color: #cc0000;
+    margin-top: 0;
+}
+
+.message_error button 
+{
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.message_error button:hover { background-color: #e0e0e0; }
+
+.title_marvel 
+{
+    color: #e23636;
+    text-align: center;
+    font-size: 28px;
+    margin: 20px 0;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}

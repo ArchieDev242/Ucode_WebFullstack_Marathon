@@ -1,0 +1,16 @@
+{
+    "name": "t03_files",
+    "version": "1.0.0",
+    "description": "File upload and download task",
+    "main": "index.js",
+    "scripts": {
+        "test": "node index.js"
+    },
+    "dependencies": {
+        "ejs": "^3.1.10",
+        "express": "^4.21.2",
+        "express-session": "^1.17.2",
+        "formidable": "^3.5.4",
+        "iconv-lite": "^0.6.3"
+    }
+}

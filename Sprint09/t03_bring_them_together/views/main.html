@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWORD System - Main Dashboard</title>
+    <link rel = "stylesheet" href = "/style.css">
+    <link rel = "preconnect" href = "https://fonts.googleapis.com">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
+    <link href = "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class = "glitch_container">
+        <div class = "glitch" data-text = "SWORD">SWORD</div>
+    </div>
+    
+    <div class = "container">
+        <h1>OPERATIVE DASHBOARD</h1>
+        <div class = "neon_line"></div>
+        
+        <div class = "main_dashboard">
+            <div class = "welcome_panel">
+                <h2>WELCOME, <span id = "user_fullname">AGENT</span></h2>
+                <p class = "access_level">ACCESS LEVEL: <span class = "level_indicator" id = "access_level">L3</span></p>
+            </div>
+            
+            <div class = "status_panel">
+                <div class = "status_item">
+                    <span class = "status_label">AGENT ID:</span>
+                    <span class = "status_value" id = "user_id"></span>
+                </div>
+
+                <div class = "status_item">
+                    <span class = "status_label">FULL NAME:</span>
+                    <span class = "status_value" id = "user_fullname2"></span>
+                </div>
+
+                <div class = "status_item">
+                    <span class = "status_label">CALLSIGN:</span>
+                    <span class = "status_value" id = "user_login"></span>
+                </div>
+
+                <div class = "status_item">
+                    <span class = "status_label">EMAIL:</span>
+                    <span class = "status_value email_wrap" id = "user_email"></span>
+                </div>
+
+                <div class = "status_item">
+                    <span class = "status_label">STATUS:</span>
+                    <span class = "status_value" id = "user_status"></span>
+                </div>
+            </div>
+            
+            <div class = "action_panel">
+
+                <h3>SYSTEM ACTIONS</h3>
+                <div class = "action_grid">
+                    <div class = "action_button">
+                        <button class = "terminal_btn">ACCESS DATABASE</button>
+                    </div>
+
+                    <div class = "action_button">
+                        <button class = "terminal_btn">VIEW REPORTS</button>
+                    </div>
+
+                    <div class = "action_button">
+                        <button class = "terminal_btn">MISSIONS</button>
+                    </div>
+
+                    <div class = "action_button">
+                        <button class = "terminal_btn">COMMUNICATION</button>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class = "action_buttons">
+                <button id = "logout_btn" class = "emergency">
+                    TERMINATE SESSION_<span class = "blink">|</span>
+                </button>
+            </div>
+            
+        </div>
+        
+        <div id = "msg"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            check_auth_status();
+        });
+
+        document.getElementById('logout_btn').addEventListener('click', async () => {
+            try 
+            {
+                const response = await fetch('/api/logout', { method: 'POST' });
+
+                if(response.ok) 
+                {
+                    window.location.href = '/login';
+                }
+            } catch(error) 
+            {
+                showmsg('Failed to terminate session! :<', false);
+            }
+        });
+
+        async function check_auth_status() 
+        {
+            try 
+            {
+                const response = await fetch('/check-auth', {
+                    method: 'GET',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    credentials: 'same-origin'
+                });
+                
+                if(!response.ok) 
+                {
+                    throw new Error('Server response was not ok :<');
+                }
+                
+                const data = await response.json();
+                
+                if(data.authenticated && data.user) 
+                {
+                    fill_user_details(data.user);
+                } else 
+                {
+                    window.location.href = '/login';
+                }
+            } catch(error) 
+            {
+                console.error('Status check failed :<  :', error);
+                showmsg('Connection to HQ lost! :<', false);
+                
+                setTimeout(() => {
+                    check_auth_status();
+                }, 5000);
+            }
+        }
+
+        function fill_user_details(user) 
+        {
+            document.getElementById('user_fullname').textContent = user.full_name ? user.full_name.toUpperCase() : 'AGENT';
+            document.getElementById('user_fullname2').textContent = user.full_name ? user.full_name.toUpperCase() : 'AGENT';
+            document.getElementById('user_id').textContent = user.id || 'UNKNOWN';
+            document.getElementById('user_login').textContent = user.login ? user.login.toUpperCase() : 'UNKNOWN';
+            document.getElementById('user_email').textContent = user.email || 'UNKNOWN';
+            
+            const status_element = document.getElementById('user_status');
+
+            if(status_element) 
+            {
+                status_element.textContent = user.status ? user.status.toUpperCase() : 'USER';
+                
+                if(user.status === 'admin') 
+                {
+                    status_element.classList.add('admin_status');
+                    status_element.classList.remove('user_status');
+                } else 
+                {
+                    status_element.classList.add('user_status');
+                    status_element.classList.remove('admin_status');
+                }
+            }
+        }
+
+        function showmsg(text, is_success) 
+        {
+            const msg_div = document.getElementById('msg');
+            msg_div.textContent = text;
+            msg_div.className = `msg ${is_success ? 'success' : 'error'}`;
+            
+            if(!is_success) 
+            {
+                msg_div.classList.add('glitch_text');
+                setTimeout(() => msg_div.classList.remove('glitch_text'), 2000);
+            }
+            
+            setTimeout(() => {
+                msg_div.textContent = '';
+                msg_div.className = 'msg';
+            }, 5000);
+        }
+    </script>
+</body>
+</html>

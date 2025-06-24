@@ -1,0 +1,13 @@
+#superhero_form 
+{
+    border: 2px solid gray;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+}
+
+.form_group_group 
+{
+    display: flex;
+    gap: 10px;
+}

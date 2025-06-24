@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superhero application</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+    <h1>Superhero Form</h1>
+    <form id = "superhero_form">
+        <fieldset>
+            <legend>About the Superhero</legend>
+
+            <br>
+            
+            <div class = "form_group_group">
+                <div class = "form_group">
+                    <label for = "name_field">Real Name</label>
+                    <input type = "text" id = "name_field" placeholder = "Superhero real name" required autofocus>
+                </div>
+
+                <div class = "form_group">
+                    <label for = "superhero_field">Superhero Name</label>
+                    <input type = "text" id = "superhero_field" placeholder = "Superhero name" required>
+                </div>
+
+                <div class = "form_group">
+                    <label for = "age">Age</label>
+                    <input type = "number" id = "age" min = "1" max = "999" step = "1" required>
+                </div>
+            </div>
+
+            <br>
+
+            <div class = "form_group">
+                <label for = "info_field">About</label>
+                <textarea id = "info_field" cols = "70" rows = "5" maxlength = "500" placeholder = "Information about the superhero, max 500 symbols"></textarea>
+            </div>
+
+            <br>
+
+            <div class = "photo_file">
+                <label for = "photo">Photo:</label>
+                <input type = "file" id = "photo">
+            </div>
+
+            <br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Powers</legend>
+
+            <br>
+
+            <div class = "checkbox_group">
+                <input type = "checkbox" id = "telekinesis">
+                <label for = "telekinesis">Telekinesis</label>
+
+                <input type = "checkbox" id = "strength_vs_speed">
+                <label for = "strength_vs_speed">Super strength or speed</label>
+
+                <input type = "checkbox" id = "shapeshifting">
+                <label for = "shapeshifting">Shapeshifting</label>
+
+                <input type = "checkbox" id = "flight">
+                <label for = "flight">Flight</label>
+
+                <input type = "checkbox" id = "elemental_control">
+                <label for  = "elemental_control">Elemental Control</label>
+
+                <input type = "checkbox" id = "other">
+                <label for = "other">Other</label>
+            </div>
+
+            <br>
+
+            <div class = "form_group">
+                <label for = "control">Level of control</label>
+                <input type = "range" id = "control" min = "0" max = "10" step = "1" value = "1">
+            </div>
+
+            <br>
+
+        </fieldset>
+
+        <fieldset>
+
+            <br>
+
+            <legend>Origin of Powers</legend>
+            <div class = "radio_group">
+                <input type = "radio" name = "powers_origin" id = "idk">
+                <label for = "idk">Unknown</label>
+
+                <input type = "radio" name = "powers_origin" id = "lab_accident">
+                <label for = "lab_accident">Freak lab accident</label>
+
+                <input type = "radio" name = "powers_origin" id = "ancient_chosen">
+                <label for = "ancient_chosen">Chosen by an ancient wise being</label>
+
+                <input type = "radio" name = "powers_origin" id = "not_a_human">
+                <label for = "not_a_human">The superhero is not human</label>
+
+                <input type = "radio" name = "powers_origin" id = "other_origin">
+                <label for = "other_origin">Other</label>
+            </div>
+            <br>
+
+        </fieldset>
+
+        <br>
+
+        <div class = "form_buttons">
+            <input type = "reset" value = "CLEAR">
+            <input type = "submit" value = "SEND">
+        </div>
+        
+        <br>
+        
+    </form>
+</body>
+</html>

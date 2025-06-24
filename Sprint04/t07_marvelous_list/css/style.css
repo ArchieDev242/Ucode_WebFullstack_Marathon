@@ -1,0 +1,131 @@
+body 
+{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f3f4f6;
+    margin: 0;
+    padding: 0;
+}
+
+.container 
+{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+h1 
+{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.card 
+{
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.flex_container { display: flex; }
+
+.sidebar 
+{
+    width: 25%;
+    background-color: #e5e7eb;
+    padding: 16px;
+}
+
+.sidebar ul 
+{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.sidebar li 
+{
+    margin-bottom: 8px;
+}
+
+.sidebar a 
+{
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.sidebar a:hover 
+{
+    color: #3b82f6;
+}
+
+.sidebar a.active 
+{
+    font-weight: 700;
+    border-left: 4px solid #3b82f6;
+    padding-left: 8px;
+}
+
+.content 
+{
+    width: 75%;
+    padding: 16px;
+    display: flex;
+}
+
+.details 
+{
+    width: 66.67%;
+    padding-right: 16px;
+}
+
+.details h2 
+{
+    font-size: 20px;
+    font-weight: 700;
+    transition: opacity 0.3s ease;
+}
+
+.date 
+{
+    color: #6b7280;
+    margin-bottom: 16px;
+    transition: opacity 0.3s ease;
+}
+
+.actors 
+{
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.actors button 
+{
+    background-color: #3b82f6;
+    color: #ffffff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.actors button:last-child { margin-right: 0; }
+
+.poster { width: 33.33%; }
+
+.poster img 
+{
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    max-height: 300px;
+    transition: opacity 0.3s ease;
+}
+
+.content.fade { opacity: 0.5; } 

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handbook</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+    <div class = "handbook_wrapper">
+        <section class = "handbook_menu">
+
+          <h1>Web Development Handbook</h1>
+          <h2>Contents</h2>
+
+          <ul>
+            <li><a href = "#unique_html">HTML</a></li>
+            <li><a href = "#unique_css">CSS</a></li>
+            <li><a href = "#unique_protocols">Protocols</a></li>
+          </ul>
+
+
+        </section>
+
+        <section id = "unique_html" class = "handbook_section">
+
+        <h2>HTML</h2>
+        <article class = "topic_section">
+
+            <h3>Introduction to HTML</h3>
+            <p>HTML is the standard markup language for creating web pages.</p>
+            <code>&lt;!DOCTYPE html&gt;</code>
+            <p>Example:</p>
+
+            <pre><code>
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Title&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+          
+        </article>
+
+        <article class = "topic_section">
+
+            <h3>HTML Elements</h3>
+            <p>HTML documents are composed of elements represented by tags.</p>
+            <code>&lt;p&gt;This is a paragraph&lt;/p&gt;</code>
+            <p>Example:</p>
+
+            <pre><code>
+&lt;div&gt;
+    &lt;h2&gt;Heading&lt;/h2&gt;
+    &lt;p&gt;Paragraph&lt;/p&gt;
+&lt;/div&gt;
+
+            </code></pre>
+
+        </article>
+
+        <article class = "topic_section">
+
+            <h3>HTML Attributes</h3>
+            <p>Attributes provide additional information about elements.</p>
+            <code>&lt;img src="image.jpg" alt="Image"&gt;</code>
+            <p>Example:</p>
+            <pre><code>&lt;a href="https://www.example.com"&gt;Link&lt;/a&gt;</code></pre>
+
+        </article>
+
+        <article class = "topic_section">
+
+            <h3>HTML Forms</h3>
+            <p>Forms allow users to input data for server submission.</p>
+            <code>&lt;form action="/submit" method="post"&gt;</code>
+            <p>Example:</p>
+            <pre><code>&lt;input type="text" name="username"&gt;</code></pre>
+
+        </article>
+
+
+        </section>
+
+
+        <section id = "unique_css" class = "handbook_section">
+
+        <h2>CSS</h2>
+        <article class = "topic_section">
+
+            <h3>Introduction to CSS</h3>
+            <p>CSS is used for describing the presentation of HTML documents.</p>
+            <code>body { background-color: lightblue; }</code>
+            <p>Example:</p>
+
+            <pre><code>
+body 
+{ 
+    font-family: Arial, sans-serif; 
+}
+
+            </code></pre>
+
+        </article>
+
+        <article class = "topic_section">
+
+            <h3>CSS Selectors</h3>
+            <p>Selectors are patterns used to target elements for styling.</p>
+
+            <code>
+p 
+{ 
+    color: blue; 
+}
+            </code>
+            <p>Example:</p>
+
+            <pre><code>
+#header 
+{ 
+    font-size: 24px; 
+}
+            </code></pre>
+
+        </article>
+
+        <article class = "topic_section">
+
+            <h3>CSS Box Model</h3>
+            <p>The box model describes element spacing, including padding, border, and margin.</p>
+            <code>.box { padding: 10px; }</code>
+            <p>Example:</p>
+
+            <pre><code>
+.box 
+{ 
+    border: 1px solid black; 
+}
+            </code></pre>
+
+        </article>
+
+        <article class = "topic_section">
+
+            <h3>CSS Flexbox</h3>
+            <p>Flexbox is a layout model that arranges elements within a container.</p>
+            <code>.container { display: flex; }</code>
+            <p>Example:</p>
+
+            <pre><code>
+.item 
+{ 
+    flex-grow: 1; 
+}
+            </code></pre>
+
+        </article>
+
+
+        </section>
+
+
+        <section id = "unique_protocols" class = "handbook_section">
+
+        <h2>Protocols</h2>
+        <article class = "topic_section">
+
+            <h3>HTTP/HTTPS</h3>
+            <p>HTTP and HTTPS are protocols for data transfer on the web. Methods and response codes are described in detail.</p>
+          
+        </article>
+
+        <article class = "topic_section">
+
+            <h3>DNS</h3>
+            <p>DNS translates domain names to IP addresses and includes various record types.</p>
+        
+        </article>
+
+        <article class = "topic_section">
+
+            <h3>IP</h3>
+            <p>IP defines the rules for data transmission over the internet and methods for determining an IP address.</p>
+         
+        </article>
+
+
+        </section>
+      </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+.wrapper 
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: 270px;
+    height: 140px;
+    border-radius: 5px;
+    font-family: Verdana, sans-serif;
+    padding: 10px;
+    margin: 20px;
+}
+
+.card > img 
+{
+    height: 182px;
+    position: relative;
+    bottom: 57px;
+    align-self: flex-start;
+}
+
+.hero 
+{
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.name 
+{
+    color: rgba(250, 250, 250, 0.5);
+    font-size: 9px;
+}
+
+#cap_amerima 
+{
+    background: linear-gradient(#4568DC, #B06AB3);
+}
+
+#ironman
+{
+    background: linear-gradient(#E52D27, #B31217);
+}
+
+#black_widow
+{
+    background: linear-gradient(90deg, #000, #61045F);
+}
+
+#spudieman 
+{
+    background: linear-gradient(#E52D27, #000);
+}
+
+#spudieman > img 
+{
+    bottom: 35px;
+}

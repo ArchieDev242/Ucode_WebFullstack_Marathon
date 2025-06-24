@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel = "stylesheet" href = "style.css">
+    <link href = "https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel = "stylesheet">
+</head>
+<body>
+    <h1 id = header>Settings</h1>
+    <div id = "container">
+        <div id ="center">
+
+            <div class = "fonts_settings">
+                <p>Typeface</p>
+                <select name = "typeface" id = "typeface">
+                    <option value = "acunimPro">Acunim Pro</option>
+                    <option value = "comicSans">Comic Sans</option>
+                    <option disabled value ="com">Times New Roman</option>
+                </select>
+                <label for = "typeface"></label>
+            </div>
+
+            <div class = "UI_settings">
+                <p>Dark UI</p>
+                <input type = "checkbox" name = "UI_btn" id ="dark_UI">
+                <label for = "dark_UI"></label>
+            </div>
+
+            <div class = "btn_settings">
+                <p>Weight</p>
+                <form>
+                    <input type = "radio" id = "regular" name = "weight" value = "regular">
+                    <label for = "regular">Regular</label>
+                    <input type = "radio" id = "bold" name = "weight" value = "bold">
+                    <label for = "bold">Bold</label>
+                </form>
+            </div>
+
+            <div class = "colors">
+                <p>Color</p>
+                <div>
+                    <input type = "checkbox" name = "color" id = "blue">
+                    <label for = "blue"></label>
+                    <input type = "checkbox" name = "color" id = "green">
+                    <label for = "green"></label>
+                    <input type = "checkbox" name = "color" id = "pink">
+                    <label for = "pink"></label>
+                    <input type = "checkbox" name = "color" id = "yellow">
+                    <label for = "yellow"></label>
+                    <input type = "checkbox" name = "color" id = "orange">
+                    <label for= "orange"></label>
+                </div>
+            </div>
+
+            <div class = "fonts_size">
+                <p>Size</p>
+                <input type = "range" id = "fontSize" min = "12" max = "32" step = "1" value = "0">
+                <label for = "fontSize"></label>
+            </div>
+        </div>
+
+        <nav id = "menu">
+
+            <label for = "settings">
+                <input type = "button" name = "settings" id = "settings_btn" value = "settings">
+                <img src = "./assets/images/BRUSH.png" alt = "brush icon">
+            </label>
+            
+            <br>
+
+            <label for = "user">
+                <input type = "button" name = "user" id = "user_btn" value = "user">
+                <img src = "./assets/images/USER.png" alt = "user icon">
+            </label>
+            
+            <br>
+
+            <label for = "message">
+                <input type = "button" name = "messege" id = "sms_btn" value = "messege">
+                <img src = "./assets/images/SMS.png" alt = "message icon">
+            </label>
+            
+            <br>
+
+            <label for = "screen">
+                <input type = "button" name = "screen" id = "screen_btn" value = "screen">
+                <img src = "./assets/images/PC.png" alt = "screen icon">
+            </label>
+            
+            <br>
+
+        </nav>
+    </div>
+</body>
+</html>

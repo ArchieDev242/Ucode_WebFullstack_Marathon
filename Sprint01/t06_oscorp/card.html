@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product card</title>
+    <link rel = "stylesheet" href = "style.css" />
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body class = "card">
+    <header class = "header">
+        <div class = "container header_container">
+            <div class = "logo">
+                <img src = "assets/images/Oscorp.jpg" alt = "Oscorp Logo" width = "100" />
+            </div>
+            <nav>
+                <a href = "#">About</a>
+                <a href = "#">Service</a>
+                <a href = "#">Contact</a>
+                <div class = "search_container">
+                    <input type = "text" placeholder = "Search..." />
+                </div>
+            </nav>
+            <div class = "phone">Phone: +5551234567</div>
+        </div>
+    </header>
+
+    <div class = "breadcrumb_container">
+        <div class = "container">
+            <nav class = "breadcrumb">
+                <a href = "index.html" class = "breadcrumb_home">Home</a>
+                <span class = "breadcrumb_separator">/</span>
+                <a href = "index.html" class = "breadcrumb_catalog">Catalog</a>
+                <span class = "breadcrumb_separator">/</span>
+                <a href = "#" class = "breadcrumb_product">Product</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class = "container">
+        <div class = "product_detail hproduct">
+            <div class = "product_left">
+                <div class = "product_text">
+                    <h1 class = "fn">RADIOACTIVE SPIDER</h1>
+                    <p class = "description">This radioactive spider is a unique product that can give you superpowers. Handle with care!</p>
+                </div>
+                <div class = "product_image">
+                    <img class = "photo" src = "assets/images/Spider.jpg" alt = "Radioactive Spider" />
+                </div>
+            </div>
+            <div class = "product_right">
+                <div class = "product_info">
+                    <h1>RADIOACTIVE SPIDER</h1>
+                    <h4 class = "price">$3499.99</h4>
+                    <p>Availability: <span class = "status available availability">available</span></p>
+                    <button>BUY</button>
+                    <div class = "product_details">
+                        <p>Quantity: <span>1</span></p>
+                        <p>Weight: <span>1/2 pound</span></p>
+                        <p>Eyes: <span>red</span></p>
+                        <p>Effect: <span>gives powers</span></p>
+                    </div>
+                </div>
+                <div class = "product_reviews">
+                    <div class = "review_card review hreview">
+                        <img src = "assets/images/Reviewer.jpg" alt = "Reviewer" />
+                        <div class = "review_content">
+                            <p class = "reviewer vcard fn">Peter</p>
+                            <p class = "description">Really changed my life! Would recommend.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class = "footer">
+        <div class = "container footer_container">
+            <div>Copyright © 2025 | OSCORP | All Rights Reserved</div>
+            <div>
+                <a href = "#">Terms of Service</a>
+                <a href = "#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
