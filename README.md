@@ -11,7 +11,7 @@
 <details open>
   <summary>Ukrainian 🇺🇦</summary>
 
-<span style="margin-top: 5px;"></span>
+<span style = "margin-top: 5px;"></span>
 
 > ⚠️**УВАГА:**
 >
@@ -197,26 +197,26 @@ Web Full Stack Марафон - це інтенсивне вивчення су�
 
 ## <h2 id="Завдання">📋 Завдання</h2>
 
-| Name | Description | Oracle Mark | Total Mark |
-|------|-------------|:-----------:|:----------:|
-| [Sprint00](./Sprint00) | Start learning web technologies. | 100 | 100 |
-| [Sprint01](./Sprint01) | Acquire skills necessary to produce awesome layouts. | 100 | 100 |
-| [Sprint02](./Sprint02) | Explore JavaScript basics. | 100 | 100 |
-| [Sprint03](./Sprint03) | Learn to use objects. | 91 | 91 |
-| [Sprint04](./Sprint04) | Explore user interaction with a web service and interaction between two web services. | 80 | 88 |
-| [Sprint05](./Sprint05) | Learn the Node.js basics. | 100 | 97 |
-| [Sprint06](./Sprint06) | Acquire skills to operate with user data. | 100 | 100 |
-| [Sprint07](./Sprint07) | Learn to operate with data received from a web page. | 100 | 97 |
-| [Sprint08](./Sprint08) | Connect to and operate a MySQL database using Node.js. | 100 | 100 |
-| [Sprint09](./Sprint09) | Build your first web service. | 100 | 100 |
-| [Race00](https://github.com/ArchieDev242/Ucode_Calculator) | Combine the knowledge gained by your teammate to create a working program. | 100 | 100 |
-| [Race01](https://github.com/ArchieDev242/card-game) | Sum up all the knowledge gained during the Half Marathon. (Card game) | 100 | 88 |
+| Назва | Опис | Оцінка Oracle | Загальна оцінка |
+|-------|------|:-------------:|:--------------:|
+| [Sprint00](./Sprint00) | Початок вивчення веб-технологій. | 100 | 100 |
+| [Sprint01](./Sprint01) | Освоєння навичок створення чудових макетів. | 100 | 100 |
+| [Sprint02](./Sprint02) | Дослідження основ JavaScript. | 100 | 100 |
+| [Sprint03](./Sprint03) | Вивчення роботи з об'єктами. | 91 | 91 |
+| [Sprint04](./Sprint04) | Дослідження взаємодії користувача з веб-сервісом та взаємодії між веб-сервісами. | 80 | 88 |
+| [Sprint05](./Sprint05) | Вивчення основ Node.js. | 100 | 97 |
+| [Sprint06](./Sprint06) | Освоєння навичок роботи з користувацькими даними. | 100 | 100 |
+| [Sprint07](./Sprint07) | Вивчення роботи з даними, отриманими з веб-сторінки. | 100 | 97 |
+| [Sprint08](./Sprint08) | Підключення до бази даних MySQL та робота з нею через Node.js. | 100 | 100 |
+| [Sprint09](./Sprint09) | Створення першого веб-сервісу. | 100 | 100 |
+| [Race00](https://github.com/ArchieDev242/Ucode_Calculator) | Поєднання знань, отриманих командою, для створення робочої програми. | 100 | 100 |
+| [Race01](https://github.com/ArchieDev242/card-game) | Підсумок всіх знань, отриманих під час Півмарафону. (Карткова гра) | 100 | 88 |
 
 ---
 
 ## 💭 Мої враження
 
-Я працюю над Web Full Stack Марафоном протягом 2024-2025 навчального року, і це неймовірний досвід для мене. Ця подорож - це поєднання рішучості, знань та співпраці. Якщо ви студент інноваційного кампусу, я наполегливо рекомендую вам зануритися у цю подорож - виклики будуть випробуванням для вас, але знання та навички, які ви отримаєте, будуть того варті.
+Я працюю над Web Full Stack Марафоном протягом 2025 року, і це неймовірний досвід для мене. Ця подорож - це поєднання рішучості, знань та співпраці. Якщо ви студент інноваційного кампусу, я наполегливо рекомендую вам зануритися у цю подорож - виклики будуть випробуванням для вас, але знання та навички, які ви отримаєте, будуть того варті.
 
 Давайте програмувати разом наш шлях до успіху у веб-розробці! 💻✨
 
@@ -430,7 +430,7 @@ Here's what I learned during the marathon:
 
 ## 💭 My Takeaway
 
-I've been working on the Web Full Stack Marathon throughout the 2024-2025 academic year, and it's been an incredible experience for me. This journey is a combination of determination, knowledge, and collaboration. If you're a student at Innovation Campus, I highly recommend diving into this journey—the challenges will test you, but the knowledge and skills you'll gain will be worth it.
+I've been working on the Web Full Stack Marathon throughout the 2025 year, and it's been an incredible experience for me. This journey is a combination of determination, knowledge, and collaboration. If you're a student at Innovation Campus, I highly recommend diving into this journey—the challenges will test you, but the knowledge and skills you'll gain will be worth it.
 
 Let's code our way to success in web development together! 💻✨
 
@@ -625,26 +625,26 @@ Hier ist, was ich während des Marathons gelernt habe:
 
 ## <h2 id = "Aufgaben">📋 Aufgaben</h2>
 
-| Name | Description | Oracle Mark | Total Mark |
-|------|-------------|:-----------:|:----------:|
-| [Sprint00](./Sprint00) | Start learning web technologies. | 100 | 100 |
-| [Sprint01](./Sprint01) | Acquire skills necessary to produce awesome layouts. | 100 | 100 |
-| [Sprint02](./Sprint02) | Explore JavaScript basics. | 100 | 100 |
-| [Sprint03](./Sprint03) | Learn to use objects. | 91 | 91 |
-| [Sprint04](./Sprint04) | Explore user interaction with a web service and interaction between two web services. | 80 | 88 |
-| [Sprint05](./Sprint05) | Learn the Node.js basics. | 100 | 97 |
-| [Sprint06](./Sprint06) | Acquire skills to operate with user data. | 100 | 100 |
-| [Sprint07](./Sprint07) | Learn to operate with data received from a web page. | 100 | 97 |
-| [Sprint08](./Sprint08) | Connect to and operate a MySQL database using Node.js. | 100 | 100 |
-| [Sprint09](./Sprint09) | Build your first web service. | 100 | 100 |
-| [Race00](https://github.com/ArchieDev242/Ucode_Calculator) | Combine the knowledge gained by your teammate to create a working program. | 100 | 100 |
-| [Race01](https://github.com/ArchieDev242/card-game) | Sum up all the knowledge gained during the Half Marathon. (Card game) | 100 | 88 |
+| Name | Beschreibung | Oracle Note | Gesamtnote |
+|------|--------------|:-----------:|:----------:|
+| [Sprint00](./Sprint00) | Beginn des Erlernens von Web-Technologien. | 100 | 100 |
+| [Sprint01](./Sprint01) | Erwerb von Fähigkeiten zur Erstellung großartiger Layouts. | 100 | 100 |
+| [Sprint02](./Sprint02) | Erkundung der JavaScript-Grundlagen. | 100 | 100 |
+| [Sprint03](./Sprint03) | Lernen der Arbeit mit Objekten. | 91 | 91 |
+| [Sprint04](./Sprint04) | Erkundung der Benutzerinteraktion mit Web-Services und Inter-Service-Kommunikation. | 80 | 88 |
+| [Sprint05](./Sprint05) | Erlernen der Node.js-Grundlagen. | 100 | 97 |
+| [Sprint06](./Sprint06) | Erwerb von Fähigkeiten zur Arbeit mit Benutzerdaten. | 100 | 100 |
+| [Sprint07](./Sprint07) | Lernen der Arbeit mit Daten, die von Webseiten empfangen werden. | 100 | 97 |
+| [Sprint08](./Sprint08) | Verbindung zu einer MySQL-Datenbank und deren Verwaltung über Node.js. | 100 | 100 |
+| [Sprint09](./Sprint09) | Erstellung des ersten Web-Services. | 100 | 100 |
+| [Race00](https://github.com/ArchieDev242/Ucode_Calculator) | Kombination des Teamwissens zur Erstellung eines funktionierenden Programms. | 100 | 100 |
+| [Race01](https://github.com/ArchieDev242/card-game) | Zusammenfassung aller Kenntnisse, die während des Halbmarathons erworben wurden. (Kartenspiel) | 100 | 88 |
 
 ---
 
 ## 💭 Mein Fazit
 
-Ich arbeite seit dem Studienjahr 2024-2025 am Web Full Stack Marathon, und es war eine unglaubliche Erfahrung für mich. Diese Reise ist eine Kombination aus Entschlossenheit, Wissen und Zusammenarbeit. Wenn Sie Student am Innovation Campus sind, empfehle ich Ihnen dringend, sich auf diese Reise einzulassen—die Herausforderungen werden Sie testen, aber das Wissen und die Fähigkeiten, die Sie erlangen werden, werden es wert sein.
+Ich arbeite seit dem Jahr 2025 am Web Full Stack Marathon, und es war eine unglaubliche Erfahrung für mich. Diese Reise ist eine Kombination aus Entschlossenheit, Wissen und Zusammenarbeit. Wenn Sie Student am Innovation Campus sind, empfehle ich Ihnen dringend, sich auf diese Reise einzulassen—die Herausforderungen werden Sie testen, aber das Wissen und die Fähigkeiten, die Sie erlangen werden, werden es wert sein.
 
 Lassen Sie uns gemeinsam unseren Weg zum Erfolg in der Webentwicklung programmieren! 💻✨
 
